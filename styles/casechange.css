@@ -2,11 +2,24 @@
     display: flex;
     margin: auto;
     width: 50%;
-    border: 3px solid green;
     padding: 10px;
 }
 
 textarea {
-    width: 64em;
-    height: 64em;
+    width: 32em;
+    height: 32em;
+    background: #393939;
+    color: white;
+}
+
+.submitButtons {
+    display: flex;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}
+
+input {
+    margin: 2px;
+    padding: 2px;
 }

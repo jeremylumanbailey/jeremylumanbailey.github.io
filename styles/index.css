@@ -1,0 +1,24 @@
+nav {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+    color: #00b0f4;
+}
+
+a {
+    color: #00b0f4;
+    text-decoration: none;
+    font-family: Helvetica;
+  }
+
+  a:hover, a:active, a:focus {
+    color:#00b0f4;
+    text-decoration: none;
+  }
+
+header {
+    font-size: 2rem;
+    margin: auto;
+    width: 55%;
+    padding: 10px;
+}
