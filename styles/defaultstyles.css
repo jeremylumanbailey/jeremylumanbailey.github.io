@@ -9,3 +9,10 @@
 body {
     background-color: #2D2D2D;
 }
+
+.center {
+    display: flex;
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+}

@@ -3,20 +3,20 @@
   <head>
     <link rel="stylesheet" href="../styles/casechange.css">
     <link rel="stylesheet" href="../styles/defaultstyles.css">
-    <script src="../scripts/casechange.js"></script>
+    <script type='text/javascript' async=false defer=false src="../scripts/casechange.js"></script>
     <title>Jeremy Bailey Web Page</title>
   </head>
   <body>
     <div class='contentContainer'>
       <div class='textBoxes'>
-      <textarea>Input here </textarea>
-      <textarea>Output here</textarea>
+      <textarea type="text" id="userInput" placeholder="Input here" ></textarea>
+      <textarea type="text" id="userOutput"  placeholder="Output here"></textarea>
     </div>
     <div class="submitButtons">
-      <input onclick="logger" type="submit" value="Convert to uppercase">
-      <input type="submit" value="Convert to lowercase">
-      <input type="submit" value="Convert each letter">
-      <input type="submit" value="Undo last action">
+      <input onclick="convertToUppercase()" type="submit" value="Convert to uppercase">
+      <input onclick="convertToLowercase()" type="submit" value="Convert to lowercase">
+      <input onclick="convertEachLetter()" type="submit" value="Convert each letter">
+      <input onclick="undoLastAction()" type="submit" value="Undo last action">
     </div>
     </div>
     
