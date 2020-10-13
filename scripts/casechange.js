@@ -1,45 +1,35 @@
 "use strict";
 
-var obj = {
-    value: window.document.getElementById("userOutput"),
-    letMeKnow() {
-      console.log(`The variable has changed to ${this.testVar}`);
-    },
-    get testVar() {
-      return this.value;
-    },
-    set testVar(value) {
-      this.value = value;
-      this.letMeKnow();
-    }
-  }
+var currentState = 0;
+var state = [""];
+var currentOutput = window.document.getElementById("userOutput");
 
-var state = []
-var currentOutput = window.document.getElementById("userOutput"); 
+function addToState() {
+  currentState++;
+  state[currentState] = document.getElementById("userOutput").value;
+}
 
-
-
-currentOutput.addEventListener('input', (event) => {
-    // var val = document.getElementById("userOutput").value;
-    // if(val) { 
-        
-        console.log(state);
-    // }
-    
-})
+currentOutput.addEventListener("input", (event) => {
+  addToState();
+});
 
 function undoLastAction() {
-    document.getElementById("userOutput").value = state[state.length];
+  if (currentState > 0) {
+    currentState--;
+    document.getElementById("userOutput").value = state[currentState];
+  }
 }
 
 function convertToUppercase() {
   let x = document.getElementById("userInput").value;
   document.getElementById("userOutput").value = x.toUpperCase();
+  addToState();
 }
 
 function convertToLowercase() {
   let y = document.getElementById("userInput").value;
   document.getElementById("userOutput").value = y.toLowerCase();
+  addToState();
 }
 
 function convertEachLetter() {
@@ -55,4 +45,5 @@ function convertEachLetter() {
   };
 
   document.getElementById("userOutput").value = alternateCase(y);
+  addToState();
 }
